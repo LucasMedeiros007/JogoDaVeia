@@ -95,3 +95,54 @@ section.before1diagonal::before {
 section.before2diagonal::before {
   transform: rotate(-45deg);
 }
+
+@media (max-width: 487px) {
+  div {
+    width: 100px;
+    height: 100px;
+  }
+
+  section.before0::before {
+    top: 50px;
+  }
+
+  section.before3::before {
+    top: 150px;
+  }
+
+  section.before6::before {
+    top: 250px;
+  }
+
+  section.before0vertical::before,
+  section.before1vertical::before,
+  section.before2vertical::before {
+    width: 8px;
+    height: 320px;
+  }
+
+  section.before0vertical::before {
+    left: 50px;
+  }
+
+  section.before1vertical::before {
+    left: 160px;
+  }
+
+  section.before2vertical::before {
+    left: 270px;
+  }
+
+  section.before2diagonal::before {
+    width: 150%;
+    height: 8px;
+    top: 185px;
+    left: -110px;
+  }
+  section.before1diagonal::before {
+    width: 150%;
+    height: 8px;
+    top: 135px;
+    left: -110px;
+  }
+}
