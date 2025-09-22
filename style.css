@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section {
+  width: max-content;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  position: relative;
+  background-color: black;
+  gap: 10px;
+}
+
+div {
+  width: 150px;
+  height: 150px;
+  content: "";
+  background-color: rgb(255, 255, 255);
+  display: inline-block;
+  box-shadow: inset 0 -10px 0 #ffffff, inset 10px 0 0 #ffffff,
+    inset 0 10px 0 #ffffff, inset -10px 0 0 #ffffff;
+}
+
+section.before0::before,
+section.before3::before,
+section.before6::before,
+section.before0vertical::before,
+section.before1vertical::before,
+section.before2vertical::before,
+section.before1diagonal::before,
+section.before2diagonal::before {
+  content: "";
+  background-color: burlywood;
+  position: absolute;
+}
+
+section.before0::before,
+section.before3::before,
+section.before6::before {
+  width: 100%;
+  height: 8px;
+}
+
+section.before0::before {
+  top: 60px;
+}
+
+section.before3::before {
+  top: 220px;
+}
+
+section.before6::before {
+  top: 380px;
+}
+
+section.before0vertical::before,
+section.before1vertical::before,
+section.before2vertical::before {
+  width: 8px;
+  height: 470px;
+}
+
+section.before0vertical::before {
+  left: 70px;
+}
+
+section.before1vertical::before {
+  left: 230px;
+}
+
+section.before2vertical::before {
+  left: 390px;
+}
+
+section.before1diagonal::before,
+section.before2diagonal::before {
+  width: 150%;
+  height: 8px;
+  top: 235px;
+  left: -110px;
+}
+
+section.before1diagonal::before {
+  transform: rotate(45deg);
+}
+
+section.before2diagonal::before {
+  transform: rotate(-45deg);
+}

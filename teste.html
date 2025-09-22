@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogo da Velha Estilo Imagem</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .grid {
+            position: relative;
+            width: 300px;
+            height: 300px;
+        }
+
+        /* Linhas verticais */
+        .grid::before,
+        .grid::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 6px;
+            background-color: black;
+        }
+
+        .grid::before {
+            left: 33.33%;
+        }
+
+        .grid::after {
+            left: 66.66%;
+        }
+
+        /* Linhas horizontais */
+        .grid::part(horizontal-line-1),
+        .grid::part(horizontal-line-2) {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background-color: black;
+        }
+
+        /* Alternativa com extra <div>s para horizontais */
+        .grid .line {
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background-color: black;
+        }
+
+        .grid .line:nth-child(1) {
+            top: 33.33%;
+        }
+
+        .grid .line:nth-child(2) {
+            top: 66.66%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid">
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+</body>
+
+</html>
